@@ -1,0 +1,47 @@
+CUDA 사용법
+
+
+🚀 단계별 완전 가이드
+🧱 1단계: Python 3.10 가상환경 만들기
+PowerShell 열고 프로젝트 폴더로 이동
+
+아래 명령어 실행:
+
+powershell
+복사
+편집
+C:\Python310\python.exe -m venv venv310
+❗ C:\Python310\python.exe 경로는 네가 3.10 설치한 위치야.
+설치 경로가 다르면 경로 맞춰서 수정해줘.
+
+✅ 2단계: 가상환경 활성화
+powershell
+복사
+편집
+.\venv310\Scripts\Activate.ps1
+만약 실행 오류 나면 (보안 정책 문제):
+
+powershell
+복사
+편집
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv310\Scripts\Activate.ps1
+✅ (venv310) 표시되면 성공!
+
+⬆️ 3단계: pip 업그레이드
+powershell
+복사
+편집
+python -m pip install --upgrade pip
+📦 4단계: CuPy (CUDA 12.4 버전) 설치
+powershell
+복사
+편집
+pip install cupy-cuda12x -f https://pip.cupy.dev
+이 명령어가 핵심이야!
+-f https://pip.cupy.dev는 CuPy 공식 휠 저장소에서 설치하는 옵션이야.
+
+
+
+
+오른쪽 위 파이썬 버전나와있는곳 클릭 -> 커널을 가상환경으로 바꾸기
